@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 73px;
+  padding: 0px 55px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 163px;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  gap: 60px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d4a017;
+}
+
+/* Navbar Icons */
+.icons {
+  display: flex;
+  gap: 35px;
+  padding-left: 20px;
+}
+
+.icons img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+.navbar-logo img {
+  width: 50px;
+  cursor: pointer;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #333;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu a {
+  color: #fff;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+
+.show {
+  display: none;
+}
+
+.mobile-menu a:hover {
+  background-color: #444;
+}
+
+/* Show Mobile Menu */
+.mobile-menu.show {
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
+
+  .cart-table {
+    overflow: auto;
+  }
+
+  .logo img {
+    width: 123px;
+  }
+
+  .icons img {
+    width: 23px;
+    height: 23px;
+  }
+  
+  .navbar {
+    padding: 0px 14px;
+  }
+
+  .mobile-menu a {
+    font-size: 12px;
+  }
+
+  .icons {
+    gap: 24px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .logo img {
+    width: 127px;
+  }
+
+  .navbar {
+    height: 60px;
+  }
+
+  .icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icons .menu-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1279px) {
+  .icons .menu-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .icons .menu-icon {
+    display: none;
+  }
+}
