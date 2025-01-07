@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marmeto Navbar</title>
     <link rel="stylesheet" href="./styles/footerStyle.css" />
-    <link rel="stylesheet" href="./styles/bodyStyle.css">
-    <link rel="stylesheet" href="./styles/headerStyle.css">
+    <link rel="stylesheet" href="./styles/bodyStyle.css" />
+    <link rel="stylesheet" href="./styles/headerStyle.css" />
   </head>
   <body>
     <div class="main-container">
@@ -24,7 +24,12 @@
           <img src="./assets/svg/search.svg" alt="search-icon" />
           <img src="./assets/svg/heart.svg" alt="heart-icon" />
           <img src="./assets/svg/shop.svg" alt="shop-icon" />
-          <img src="./assets/menu.png" alt="menu-icon" class="menu-icon" id="menu"/>
+          <img
+            src="./assets/menu.png"
+            alt="menu-icon"
+            class="menu-icon"
+            id="menu"
+          />
         </div>
       </header>
       <nav class="mobile-menu" id="mobile-menu">
@@ -57,29 +62,9 @@
                   <th></th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td class="product-info">
-                    <img
-                      src="https://via.placeholder.com/100"
-                      alt="Product Image"
-                    />
-                    <span>Asgaard sofa</span>
-                  </td>
-                  <td>Rs. 250,000.00</td>
-                  <td>
-                    <input type="number" value="1" min="1" />
-                  </td>
-                  <td>Rs. 250,000.00</td>
-                  <td>
-                    <button class="delete-btn">
-                      <img
-                        src="./assets/svg/delete.svg"
-                        alt="Delete Icon"
-                      />
-                    </button>
-                  </td>
-                </tr>
+              <tbody id="cart-items">
+                <!-- loading -->
+                <td id="loading">Loading...</td>
               </tbody>
             </table>
           </div>
@@ -89,11 +74,11 @@
             <h3>Cart Totals</h3>
             <div class="totals-row">
               <span class="subtotal-text">Subtotal</span>
-              <span class="subtotal-value">Rs. 250,000.00</span>
+              <span class="subtotal-value" id="subtotal">Rs. 250,000.00</span>
             </div>
             <div class="totals-row total">
               <span class="total-text">Total</span>
-              <span class="total-value">Rs. 250,000.00</span>
+              <span class="total-value" id="total">Rs. 250,000.00</span>
             </div>
             <button class="checkout-btn">Check Out</button>
           </div>
@@ -102,28 +87,36 @@
 
       <footer class="features-container">
         <div class="feature-item">
-          <div class="icon-box"><img src="./assets/svg/high-quality.svg" alt="quality-logo" /></div>
+          <div class="icon-box">
+            <img src="./assets/svg/high-quality.svg" alt="quality-logo" />
+          </div>
           <div class="text-box">
             <h4>High Quality</h4>
             <p>crafted from top materials</p>
           </div>
         </div>
         <div class="feature-item">
-          <div class="icon-box"><img src="./assets/svg/warranty.svg" alt="warranty-logo" /></div>
+          <div class="icon-box">
+            <img src="./assets/svg/warranty.svg" alt="warranty-logo" />
+          </div>
           <div class="text-box">
             <h4>Warranty Protection</h4>
             <p>Over 2 years</p>
           </div>
         </div>
         <div class="feature-item">
-          <div class="icon-box"><img src="./assets/svg/free-shipping.svg" alt="free-logo" /></div>
+          <div class="icon-box">
+            <img src="./assets/svg/free-shipping.svg" alt="free-logo" />
+          </div>
           <div class="text-box">
             <h4>Free Shipping</h4>
             <p>Order over 150 $</p>
           </div>
         </div>
         <div class="feature-item">
-          <div class="icon-box"><img src="./assets/svg/support.svg" alt="support-logo" /></div>
+          <div class="icon-box">
+            <img src="./assets/svg/support.svg" alt="support-logo" />
+          </div>
           <div class="text-box">
             <h4>24 / 7 Support</h4>
             <p>Dedicated support</p>
