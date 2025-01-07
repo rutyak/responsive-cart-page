@@ -19,10 +19,10 @@ async function fetchData() {
 
     loading.style.display = "none";
 
-    cartData = data.items; 
+    cartData = data.items;
     console.log("data: ", cartData);
 
-    updateCartUI(); 
+    updateCartUI();
   } catch (error) {
     console.error(error);
   }
@@ -73,7 +73,7 @@ function updateCartUI() {
     // Update subtotal and total on quantity change
     quantityInput.addEventListener("input", () => {
       const newQuantity = parseInt(quantityInput.value) || 1;
-      item.quantity = newQuantity; 
+      item.quantity = newQuantity;
 
       const updatedSubtotal = (item.price * newQuantity) / 100;
       subtotal.textContent = new Intl.NumberFormat("en-IN", {
@@ -134,7 +134,8 @@ function updateTotals() {
 }
 
 function removeItem(id) {
-  cartData = cartData.filter((item) => item.id !== id);
+  let permission = confirm("Do you want to delete item?");
+  permission ? (cartData = cartData.filter((item) => item.id !== id)) : "";
   // Update the UI
   updateCartUI();
 }
